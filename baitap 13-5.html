@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array =[];
+        for(let i = 0 ; i <= 10; i++){
+            let number = Math.ceil(Math.random()*100);
+            array.push(number);
+            }
+            console.log(JSON.stringify(array));
+            let sumEven = 0;
+            let sumOdd = 0;
+            for(let i = 0; i < array.length; i++) {
+                if(array[i] % 2 === 0) {
+                    sumEven += array[i];
+                }else if(array[i] % 2 !== 0){
+                    sumOdd += array[i];
+                }
+            }
+            alert( ` Tong cac so le trong mang la: `+ sumEven);
+            alert( ` Tong cac so chan trong mang la: `+ sumOdd);
+
+
+    </script>
+</body>
+</html>

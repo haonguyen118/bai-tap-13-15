@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let books = [];
+    let exitProgram = false;
+    while (!exitProgram) {
+        alert(`1. Thêm sách mới.
+                2. Hiển thị danh sách sách.
+                3. tìm kiem sách theo tên.
+                4. Xóa sách theo tên.
+                5 : Thoát
+                `);
+        let choice = +prompt("Mời nhập lựa chọn :");
+        switch (choice) {
+            case 1: {
+                let book = {};
+                book.id = prompt("Mời nhập id:");
+                book.name = prompt("Mời nhập tên :");
+                book.author = prompt("mời nhập tên tác giả:");
+                book.year = prompt("Mời nhập nam phat hanh:");
+                books.push(book);
+                alert("Thêm sách thành công !");
+                break;
+            }
+            case 2: {
+                if (books.length <= 0) {
+                    alert("Danh sách trống");
+                } else {
+                    for (let i = 0; i < books.length; i++) {
+                        console.log("Id : " + books[i].id + " | Name : " + books[i].name + " | author :　" + books[i].author+ " | year : " + books[i].year);
+                    }
+                }
+                break;
+            }
+            case 3: {
+                let search = prompt("Mời nhập tên sách muốn tìm :");
+                console.log("Kết quả tìm đc là : ");
+            for (let i = 0; i < books.length; i++) {
+                        if (books[i].name.includes(search)) {
+                        console.log("Id : " + books[i].id + " | Name : " + books[i].name + " | author" + books[i].author + " | year : " + books[i].year);
+                    }
+                }
+
+                break;
+            }
+            case 4: {
+                let id = prompt("Mời nhập id sách muốn xóa :");
+                let index = -1;
+                for (let i = 0; i < books.length; i++) {
+                    if (books[i].id == id) {
+                        index = i;
+                        break;
+                    }
+                }
+                if (index === -1) {
+                    alert("Không tìm thấy sách nào với id như vậy !");
+                } else {
+                    books.splice(index, 1);
+                    alert("Xóa sách thành công !");
+                }
+                break;
+            }
+            case 5:
+                exitProgram = true;
+        }
+    }
+
+    </script>
+</body>
+</html>

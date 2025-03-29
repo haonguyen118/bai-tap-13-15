@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let students = [];
+    let exitProgram = false;
+    while (!exitProgram) {
+        alert(`1. Thêm sinh viên mới
+                2. Hiển thị danh sách sinh viên
+                3. Xóa sinh viên theo ID
+                4 : Thoát
+                `);
+        let choice = +prompt("Mời nhập lựa chọn :");
+        switch (choice) {
+            case 1: {
+                let student = {};
+                student.id = prompt("Mời nhập id");
+                student.name = prompt("Mời nhập tên :")
+                student.age = prompt("mời nhập tuổi");
+                students.push(student);
+                alert("Thêm sinh viên thành công !")
+                break;
+            }
+            case 2: {
+                if (students.length <= 0) {
+                    alert("Danh sách trống")
+                } else {
+                    for (let i = 0; i < students.length; i++) {
+                        console.log("Id : " + students[i].id + " | Name : " + students[i].name + " | Age : " + students[i].age);
+                    }
+                }
+
+                break;
+            }
+            case 3: {
+                let id = prompt("Mời nhập id sinh viên muốn xóa :");
+                let index = -1;
+                for (let i = 0; i < students.length; i++) {
+                    if (students[i].id == id) {
+                        index = i;
+                        break;
+                    }
+                }
+                if (index === -1) {
+                    alert("Không tìm thấy sinh viên nào với id như vậy !")
+                } else {
+                    students.splice(index, 1);
+                    alert("Xóa sinh viên thành công !")
+                }
+                break;
+            }
+            case 4:
+                exitProgram = true;
+        }
+    }
+    </script>
+</body>
+</html>

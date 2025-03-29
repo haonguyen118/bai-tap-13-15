@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input = (prompt(` Moi nhap vao day so bat ky`));
+        let number = input.split(",");      
+        let arr = [];
+        let j = parseInt(number[0]);
+        count = 0;
+        console.log(JSON.stringify(number));
+         for(let i = 0; i < number.length; i++)
+         
+         if (parseInt(number[i]) >= 10){
+                arr.push(number[i]);
+                count++
+            }else{
+                
+            }
+            console.log(arr);
+            console.log(count);
+
+            // bai 2: hien thi phan tu co gia tri lon nhat trong mang
+        
+            let str = (prompt(`Moi nhap day so bat ky:`));
+            let array = str.split(",");
+            let max = parseInt(array[0]);
+            let index = 0;
+            let sum = 0;
+         for( let i = 0; i < array.length; i++){
+            if (parseInt(array[i]) > max ){
+            max = array[i];
+            index = i;
+            }          
+            sum += parseInt(array[i]);
+            }
+            
+            
+           
+        
+        console.log(" Gia tri lon nhat trong day so la:" + max);
+
+         alert(` gia tri lon nhat trong day la `+ max);
+         console.log (index);
+        //  bai 3* Hien thi gia tri trung binh
+        
+     
+     console.log(`Tong cac gia tri trong mang la: `+ sum);
+     console.log(`Gia tri trung binh cua mang la: `+ sum/array.length);
+
+
+
+    //  bai 4: dao nguoc day so trong mang
+            let arrReverse = array.reverse(array);
+            console.log(arrReverse);
+   
+    </script>
+</body>
+</html>

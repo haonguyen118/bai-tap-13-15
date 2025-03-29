@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         Bai 5: Dem so nguyen am trong chuoi
+        let input = prompt(` Moi nhap vao day so bat ky: `);
+        let arr = input.split(",");
+        let arrInterger =[];
+        count = 0;
+        for (let i = 0; i < arr.length; i++){
+            if ( parsrInt(arr[i]) !== NaN && parseInt(arr[i]) < 0){
+                arrInterger.push(arr[i])
+                count++
+                }
+            }
+            console.log( arrInterger);
+            console.log(count);
+
+
+            // bai 6: Nhap vao mang so nguyen va cho nguoi dung nhap
+            //  so kiem tra xem co so nguyen do nam trong mang hay khong
+          
+            
+            
+            let array =[]
+            for( let i = 0; i <= 10; i++){
+                let number = Math.ceil(Math.random()*100);
+                array.push(number)
+            }
+            let  guess = false;
+            while(!guess){
+                let input = +(prompt(`Moi doan so trong mang`));
+               for( let i = 0; i < array.length; i++){
+                if(input === array[i]){
+                    guess = true;
+                    break;
+                    }
+                }
+                 if (guess) {
+                    alert ("Number X is in the array");
+                }else{
+                   alert(`"Number X is not in the array"`);
+                }
+                
+                }
+                // bai 7; tao 1mang va hien thi ca gia tri tu lon den nho
+            
+                let arr = [5, 456, 32, 95, 2, 6, 15, 205, 86, 52];
+                for (let i = 0; i < arr.length; i++) {
+                for (let j = i; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                let tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+                    }
+                }
+            }
+                    console.log(arr);
+
+                    // bai 8; tao 2 mang a va b, moi mang gom 10 so. noi hai mang a va b de tao ra mang c gom 20ptu
+
+                    let a = [1,2,3,4,5,6,7,8,9,10];
+                    let b = [11,12,13,14,15,16,17,18,19,20];
+                    let c = a.concat(b);
+                    console.log(c);
+
+
+
+</script>
+        
+
+
+
+    </script>
+</body>
+</html>

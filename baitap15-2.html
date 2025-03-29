@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let str = "csc261";
+let array = str.split("");
+let arr = array.reverse();
+console.log(JSON.stringify(array));
+console.log(JSON.stringify(arr.join("")));
+
+
+// bai 2 Viet mot mang va in cac ky tu so
+
+let a = `c,63,2,5,94,a,56,38,f,12,3 `;
+let string = a.split(",");
+arrNumber =[];
+for (let i = 0; i < string.length; i++){
+    if(parseInt[i] !== NaN){
+        arrNumber.push(string);
+    } else{
+
+    }
+}
+console.log(JSON.stringify(arrNumber));
+
+
+// bai 3; viet mot chuoi va dem so ky tu
+
+let i = prompt(` Moi nhap vao day so bat ky: `);
+let length = i.length;
+console.log(i);
+alert(`so ky tu trong chuoi ban vua nhap la: `+ length);
+
+
+// Bai 4; Viet hai chuoi va so sanh hai chuoi co giong nhau
+string1 = "apple";
+string2 = " grape";
+equal = true;
+if ( string1.length !== string2.length){
+    alert(`hai chuoi khac nhau`)
+}else{
+    for(let i = 0; i < string1.length; i++){
+        if(string1.chartAt(i) !== string2.chartAt(i)){
+            equal = false;
+        }
+    }
+    if(equal){
+        alert(`Hai chuoi giong nhau`);
+    }else{
+        alert(`Hai chuoi khac nhau`);
+    }
+}
+
+// bai 5; 
+
+let k = "a-d-5-g-u-2-6";
+console.log(k);
+let j = k.replace(/-/g, ("_"));
+console.log(j);
+    </script>
+   
+</body>
+</html>
